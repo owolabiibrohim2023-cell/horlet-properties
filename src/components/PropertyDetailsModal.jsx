@@ -67,7 +67,7 @@ export default function PropertyDetailsModal({ property, onClose, onSelectForEnq
 
         <div className="modal-body" style={{ padding: "1.5rem" }}>
           {/* Main Image Banner */}
-          <div style={{ position: "relative", width: "100%", height: "340px", borderRadius: "12px", overflow: "hidden", marginBottom: "1.5rem", backgroundColor: "#0f172a" }}>
+          <div className="property-modal-image" style={{ position: "relative", width: "100%", borderRadius: "12px", overflow: "hidden", marginBottom: "1.5rem", backgroundColor: "#0f172a" }}>
             <img
               src={displayImage}
               alt={property.title}

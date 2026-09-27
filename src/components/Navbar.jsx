@@ -19,7 +19,7 @@ export default function Navbar({ onOpenAdminLogin, isAdminLoggedIn, onOpenAdminP
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "auto", block: "start" });
     }
   };
 
@@ -60,7 +60,7 @@ export default function Navbar({ onOpenAdminLogin, isAdminLoggedIn, onOpenAdminP
 
       {/* Main Navbar */}
       <div className="container navbar">
-        <a href="#" className="brand-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+        <a href="#" className="brand-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "auto" }); }}>
           <div className="brand-icon-box">
             <Building2 size={24} />
           </div>
@@ -136,6 +136,8 @@ export default function Navbar({ onOpenAdminLogin, isAdminLoggedIn, onOpenAdminP
             className="mobile-menu-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle navigation menu"
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -143,7 +145,7 @@ export default function Navbar({ onOpenAdminLogin, isAdminLoggedIn, onOpenAdminP
       </div>
 
       {/* Mobile Drawer */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? "open" : ""}`}>
+      <div id="mobile-navigation" className={`mobile-drawer ${mobileMenuOpen ? "open" : ""}`}>
         <ul className="mobile-nav-links">
           <li>
             <a href="#properties" className="mobile-nav-link" onClick={(e) => { e.preventDefault(); scrollToSection("properties"); }}>

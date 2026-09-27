@@ -10,7 +10,7 @@ import {
 export default function Footer({ onOpenAdminLogin, isAdminLoggedIn, onOpenAdminPanel }) {
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
   };
 
   return (

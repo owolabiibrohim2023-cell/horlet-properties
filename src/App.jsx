@@ -64,7 +64,7 @@ export default function App() {
 
     const formElement = document.getElementById("enquire");
     if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
+      formElement.scrollIntoView({ behavior: "auto", block: "start" });
     }
 
     // Flash highlight

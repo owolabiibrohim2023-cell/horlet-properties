@@ -23,18 +23,18 @@ export default function Hero({ onApplyFilter }) {
     }
     const element = document.getElementById("properties");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "auto", block: "start" });
     }
   };
 
   const scrollToEnquiry = () => {
     const el = document.getElementById("enquire");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
   };
 
   const scrollToProperties = () => {
     const el = document.getElementById("properties");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
   };
 
   return (
